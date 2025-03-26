@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = ({onLoginSuccess}) => {
+const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-
-  
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,24 +18,18 @@ const LoginPage = ({onLoginSuccess}) => {
     try {
       const response = await fetch("http://localhost:4001/api/auth/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
       const data = await response.json();
-  
+
       if (response.ok && data.token) {
         localStorage.setItem("token", data.token);
-        setMessage("✅ Login successful! Redirecting to Home...");
+        setMessage("✅ Login successful! Redirecting...");
 
         setTimeout(() => {
-          if (onLoginSuccess) {
-            onLoginSuccess(); // ✅ Close modal & navigate home
-          } else {
-            console.error("❌ onLoginSuccess is not defined!");
-          }
+          navigate("/"); // Redirect to home page after login
         }, 1500);
       } else {
         setMessage("❌ Invalid credentials. Please try again.");
@@ -51,11 +43,13 @@ const LoginPage = ({onLoginSuccess}) => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg p-8 flex">
-        <div className="hidden md:block w-1/2 bg-green-600 text-white p-8 rounded-l-lg relative">
-          <h2 className="relative z-10 text-3xl font-bold">Welcome Back!</h2>
-          <p className="relative z-10 mt-2">Log in to access your account</p>
+        {/* Left Side (Hidden on small screens) */}
+        <div className="hidden md:block w-1/2 bg-green-600 text-white p-8 rounded-l-lg">
+          <h2 className="text-3xl font-bold">Welcome Back!</h2>
+          <p className="mt-2">Log in to access your account</p>
         </div>
 
+        {/* Right Side (Login Form) */}
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-gray-700">Welcome</h2>
           <p className="text-gray-500">Log in to your account to continue</p>
@@ -93,13 +87,10 @@ const LoginPage = ({onLoginSuccess}) => {
           </form>
 
           <p className="text-sm text-gray-600 mt-4">
-            Don't have an account? {" "}
-            <span
-        className="text-green-500 hover:underline cursor-pointer"
-        onClick={() => navigate("/signUp")}
-      >
-        Sign up!
-      </span>
+            Don't have an account?{" "}
+            <span className="text-green-500 hover:underline cursor-pointer" onClick={() => navigate("/signUp")}>
+              Sign up!
+            </span>
           </p>
         </div>
       </div>
