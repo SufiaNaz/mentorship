@@ -87,8 +87,11 @@ function NavBar() {
               <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 {navItems}
               </ul>
-            </div>
+            </div >
+              <div className="navbar-start flex items-center">
+            <img src="./images/logo.jpeg" alt="Guiding Star Logo" className="h-12 w-12 mr-2" /> 
             <a className="text-3xl font-bold cursor-pointer text-pink-500">GuidingStar</a>
+          </div>
           </div>
 
           <div className="navbar-end space-x-3">

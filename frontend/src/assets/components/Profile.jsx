@@ -56,7 +56,7 @@ const Profile = () => {
       <div className={`w-full max-w-3xl p-6 rounded-xl shadow-lg transition-all ${darkMode ? "bg-gray-800" : "bg-white"}`}>
         {/* Profile Header */}
         <div className="flex items-center space-x-6">
-          <img className="w-20 h-20 rounded-full border-4 border-blue-500" src="https://via.placeholder.com/150" alt="User Avatar" />
+          <img className="w-20 h-20 rounded-full border-4 border-blue-500" src="./images/profile.jpeg" alt="" />
           <div>
             <h2 className="text-2xl font-semibold">{user?.fullName || "Unknown User"}</h2>
             <p className="text-gray-600 dark:text-gray-400">{user?.bio || "No bio available"}</p>

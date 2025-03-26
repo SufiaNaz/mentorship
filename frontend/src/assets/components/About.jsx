@@ -6,20 +6,20 @@ const About = () => {
       <div className="max-w-3xl text-center">
         <h1 className="text-4xl font-bold text-pink-500">About GuidingStar</h1>
         <p className="mt-4 text-lg">
-          GuidingStar is your ultimate platform for discovering the best books, 
-          connecting with fellow readers, and exploring insightful recommendations.
+        Guiding Star is an innovative mentorship and career counseling platform designed to bridge the gap between students, job seekers, and experienced professionals. Our mission is to empower individuals by providing mentorship, job opportunities, interview guidance, and career development resources in one accessible place.
         </p>
         <p className="mt-2 text-lg">
-          We believe in the power of stories to inspire, educate, and entertain. 
-          Whether you’re a casual reader or a book enthusiast, we have something for you.
+          <br></br>
+          <br></br>
+          We offer:
+          <br></br>
+          <br></br>
+          One-on-One Guidance <br></br>
+          Job & Internship Listings <br></br>
+          Real-time Communication <br></br>
+          Interview Prepration <br></br>
         </p>
-        <div className="mt-6">
-          <img
-            src="https://source.unsplash.com/600x300/?books,library"
-            alt="Books"
-            className="rounded-lg shadow-lg"
-          />
-        </div>
+        
       </div>
     </div>
   );

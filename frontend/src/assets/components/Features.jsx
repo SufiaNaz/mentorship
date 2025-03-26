@@ -7,38 +7,38 @@ function Features() {
 
   const items = [
     {
-      image: "/assets/profile.png", // Replace with actual images
+      image: "./images/profileimage.jpeg", // Replace with actual images
       title: "Profile",
       description: "Manage your personal and professional details in one place.",
       path: "/profile",
     },
     {
-      image: "/assets/matching.png",
+      image: "./images/matchingalgo.jpeg",
       title: "Matching Algorithm",
       description: "Get paired with the best mentors based on preferences.",
       path: "/matching",
     },
     {
-      image: "/assets/messaging.png",
+      image: "./images/messaging.jpeg",
       title: "Messaging & Video Calling",
       description: "Communicate seamlessly with mentors and peers.",
       path: "/Message",
     },
     {
-      image: "/assets/progress.png",
+      image: "./images/progresstrack.jpeg",
       title: "Progress Tracking",
       description: "Track your mentorship progress with structured goals.",
       path: "/Progress",
     },
     {
-      image: "/assets/resources.png",
+      image: "./images/resources.jpeg",
       title: "Resources",
       description: "Access valuable learning materials and guides.",
       path: "/Resources",
     },
     {
-      image: "/assets/events.png",
-      title: "Events (Facility for Alumni)",
+      image: "./images/events.jpeg",
+      title: "Events",
       description: "Join networking events and alumni meetups.",
       path: "/Events",
     },
@@ -51,7 +51,7 @@ function Features() {
           <div className="feature-text">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-            <button onClick={() => navigate(item.path)}>Learn More</button>
+            <button onClick={() => navigate(item.path)}>View Details</button>
           </div>
           <div className="feature-image">
             <img src={item.image} alt={item.title} />
