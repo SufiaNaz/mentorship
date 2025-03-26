@@ -29,7 +29,7 @@ const LoginPage = () => {
         setMessage("✅ Login successful! Redirecting...");
 
         setTimeout(() => {
-          navigate("/"); // Redirect to home page after login
+          navigate("/profile"); // Redirect to home page after login
         }, 1500);
       } else {
         setMessage("❌ Invalid credentials. Please try again.");
