@@ -13,25 +13,25 @@ const FAQs = () => {
   const [search, setSearch] = useState("");
   const [openIndex, setOpenIndex] = useState(null);
 
-  // Filter FAQs based on search input
+  
   const filteredFaqs = faqsData.filter((faq) =>
     faq.question.toLowerCase().includes(search.toLowerCase())
   );
 
-  // Toggle FAQ accordion
+  
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Header Section */}
+     
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-blue-600">❓ FAQs & Support</h1>
         <p className="text-gray-600">Find answers to common questions or reach out for support.</p>
       </div>
 
-      {/* Search Bar */}
+      
       <div className="flex justify-center mb-6">
         <div className="relative w-2/3 md:w-1/2">
           <Search className="absolute left-3 top-2.5 text-gray-500" />
@@ -45,7 +45,7 @@ const FAQs = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
+      
       <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
         {filteredFaqs.map((faq, index) => (
           <div key={index} className="border-b border-gray-200">
@@ -61,14 +61,14 @@ const FAQs = () => {
         ))}
       </div>
 
-      {/* Support Section */}
+      
       <div className="max-w-3xl mx-auto mt-12 bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-blue-600 flex items-center gap-2">
           <LifeBuoy className="text-blue-600" /> Need More Help?
         </h2>
         <p className="text-gray-600 mb-4">Contact us through email or phone, or submit your question below.</p>
 
-        {/* Contact Info */}
+        
         <div className="flex gap-6 mb-4">
           <div className="flex items-center gap-2">
             <Mail className="text-blue-600" />
@@ -80,7 +80,7 @@ const FAQs = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
+        
         <form className="space-y-4">
           <input type="text" placeholder="Your Name" className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
           <input type="email" placeholder="Your Email" className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />

@@ -40,7 +40,7 @@ const Jobs = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
 
-  // Filter Jobs Based on Search & Category
+  
   const filteredJobs = jobsData.filter((job) =>
     job.title.toLowerCase().includes(search.toLowerCase()) &&
     (filter === "All" || job.type === filter)
@@ -48,15 +48,15 @@ const Jobs = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Page Header */}
+     
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-blue-600">🚀 Jobs & Internship Listings</h1>
         <p className="text-gray-600">Explore career opportunities that match your skills.</p>
       </div>
 
-      {/* Search & Filter */}
+      
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-6">
-        {/* Search Bar */}
+        
         <div className="relative w-full md:w-1/3">
           <Search className="absolute left-3 top-2.5 text-gray-500" />
           <input
@@ -68,7 +68,7 @@ const Jobs = () => {
           />
         </div>
 
-        {/* Filter Dropdown */}
+        
         <select
           className="p-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
           value={filter}
@@ -81,7 +81,7 @@ const Jobs = () => {
         </select>
       </div>
 
-      {/* Job Listings */}
+      
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job) => (

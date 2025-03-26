@@ -21,7 +21,7 @@ const Privacy = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Header */}
+      
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-blue-600 flex items-center justify-center gap-2">
           <ShieldCheck size={32} /> Privacy & Security
@@ -30,7 +30,7 @@ const Privacy = () => {
       </div>
 
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
-        {/* Profile Visibility Settings */}
+        
         <div className="mb-6">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <Eye size={24} className="text-blue-500" /> Profile Visibility
@@ -47,7 +47,7 @@ const Privacy = () => {
           </select>
         </div>
 
-        {/* Change Password Section */}
+        
         <div className="mb-6">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <KeyRound size={24} className="text-blue-500" /> Change Password
@@ -70,7 +70,7 @@ const Privacy = () => {
           </div>
         </div>
 
-        {/* Two-Factor Authentication */}
+       
         <div className="mb-6 flex justify-between items-center">
           <div>
             <h2 className="text-xl font-semibold flex items-center gap-2">
@@ -88,7 +88,7 @@ const Privacy = () => {
           </button>
         </div>
 
-        {/* Manage Linked Accounts */}
+        
         <div className="mb-6">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <Settings size={24} className="text-blue-500" /> Linked Accounts
@@ -101,7 +101,7 @@ const Privacy = () => {
           </div>
         </div>
 
-        {/* Delete Account */}
+        
         <div className="text-center">
           <button className="bg-red-600 text-white px-6 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-red-700">
             <Trash size={20} /> Delete Account

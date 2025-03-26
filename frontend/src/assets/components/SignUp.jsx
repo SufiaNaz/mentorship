@@ -6,19 +6,19 @@ const SignUp = () => {
     fullName: "",
     email: "",
     password: "",
-    role: "student", // Default role selection
+    role: "student", 
   });
 
   const [isSignedUp, setIsSignedUp] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Handle input changes
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle signup submission
+  
   const handleSignup = async (e) => {
     e.preventDefault();
     setError(null);
@@ -41,7 +41,7 @@ const SignUp = () => {
       console.log("Signup successful", data);
       setIsSignedUp(true);
 
-      // Redirect to Home page after 2 seconds
+      
       setTimeout(() => {
         navigate("/");
       }, 2000);
@@ -54,14 +54,14 @@ const SignUp = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-violet-100">
       <div className="bg-white rounded-lg shadow-lg p-8 flex">
-        {/* Left Side */}
+        
         <div className="hidden md:block w-1/2 bg-violet-600 text-white p-8 rounded-l-lg relative">
           <div className="absolute inset-0 bg-black bg-opacity-40 rounded-l-lg"></div>
           <h2 className="relative z-10 text-3xl font-bold">Join Us!</h2>
           <p className="relative z-10 mt-2">Create an account to get started</p>
         </div>
 
-        {/* Right Side */}
+        
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-gray-700">Sign Up</h2>
           <p className="text-gray-500">Create a new account</p>

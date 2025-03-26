@@ -11,14 +11,14 @@ const Notification = () => {
   const [notifications, setNotifications] = useState(initialNotifications);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  // Mark a notification as read
+  
   const markAsRead = (id) => {
     setNotifications(notifications.map(notif => notif.id === id ? { ...notif, read: true } : notif));
   };
 
   return (
     <div className="relative">
-      {/* Notification Bell Icon */}
+      
       <button
         onClick={() => setShowDropdown(!showDropdown)}
         className="relative p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition"
@@ -29,7 +29,7 @@ const Notification = () => {
         )}
       </button>
 
-      {/* Dropdown Notifications List */}
+      
       {showDropdown && (
         <div className="absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-4 z-50">
           <h3 className="text-lg font-semibold mb-3 text-gray-800">Notifications</h3>

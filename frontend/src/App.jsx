@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
-import NavBar from './assets/components/NavBar'; // Import NavBar
+import NavBar from './assets/components/NavBar'; 
 import Home from './home/Home';
 import SignUp from "./assets/components/SignUp";
 import LoginPage from './assets/components/LoginPage';
@@ -27,16 +27,16 @@ function App() {
   const handleSuccessfulLogin = () => {
     console.log("Login successful! Closing modal and navigating to home...");
     setShowLogin(false);
-    navigate("/");  // Ensure `navigate` is correctly set up
+    navigate("/");  
   };
   
   return (
     <>
-      {/* Navbar appears on all pages */}
+      
       <NavBar /> 
 
       <div className="dark:bg-slate-900 dark:text-white pt-16">
-        {/* Ensure enough padding-top (pt-16) to avoid overlap with fixed navbar */}
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/LoginPage" element={<LoginPage onLoginSuccess={handleSuccessfulLogin} />} />

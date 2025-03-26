@@ -12,22 +12,22 @@ const resourcesData = [
 
 const Resources = () => {
   const [search, setSearch] = useState("");
-  const navigate = useNavigate(); // Use React Router for navigation
+  const navigate = useNavigate(); 
 
-  // Filter resources based on search input
+  
   const filteredResources = resourcesData.filter((resource) =>
     resource.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Header */}
+      
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-blue-600">📚 Resources Hub</h1>
         <p className="text-gray-600">Explore learning materials, career guides, and mentorship resources.</p>
       </div>
 
-      {/* Search Bar */}
+      
       <div className="flex justify-center mb-6">
         <div className="relative w-1/2">
           <Search className="absolute left-3 top-2.5 text-gray-500" />
@@ -41,12 +41,12 @@ const Resources = () => {
         </div>
       </div>
 
-      {/* Resource Cards */}
+      
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {filteredResources.map((resource) => (
           <div
             key={resource.id}
-            onClick={() => navigate(resource.path)} // Navigate on click
+            onClick={() => navigate(resource.path)} 
             className="bg-white shadow-lg rounded-lg p-5 flex items-center gap-4 hover:shadow-xl transition transform hover:scale-105 cursor-pointer"
           >
             <div className="text-blue-600 text-3xl">{resource.icon}</div>

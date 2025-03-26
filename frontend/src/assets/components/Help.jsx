@@ -20,13 +20,13 @@ const Help = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      {/* Header */}
+      
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-blue-600">🛠 Help Center</h1>
         <p className="text-gray-600">Find answers, get help, and contact support.</p>
       </div>
 
-      {/* Search Bar */}
+      
       <div className="flex justify-center mb-6">
         <div className="relative w-1/2">
           <Search className="absolute left-3 top-2.5 text-gray-500" />
@@ -40,7 +40,7 @@ const Help = () => {
         </div>
       </div>
 
-      {/* Help Topics */}
+      
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         {helpTopics.map((topic, index) => (
           <a key={index} href={topic.link} className="bg-white p-4 shadow-md rounded-lg flex flex-col items-center hover:shadow-xl transition">
@@ -50,7 +50,7 @@ const Help = () => {
         ))}
       </div>
 
-      {/* FAQ Section */}
+      
       <div className="max-w-4xl mx-auto mt-10">
         <h2 className="text-2xl font-bold text-blue-600 mb-4">Frequently Asked Questions</h2>
         <div className="space-y-4">
@@ -69,7 +69,7 @@ const Help = () => {
         </div>
       </div>
 
-      {/* Contact Support */}
+      
       <div className="text-center mt-10">
         <h2 className="text-2xl font-bold text-blue-600 mb-2">Need More Help?</h2>
         <p className="text-gray-600">Reach out to our support team.</p>

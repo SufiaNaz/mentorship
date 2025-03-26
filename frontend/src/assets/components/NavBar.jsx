@@ -131,7 +131,7 @@ function NavBar() {
             </div>
           </div>
 
-          {/* Login Modal */}
+          
           {showLogin && (
             <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
               <div className="bg-white p-6 rounded-lg shadow-lg relative">

@@ -7,7 +7,7 @@ function Features() {
 
   const items = [
     {
-      image: "./images/profileimage.jpeg", // Replace with actual images
+      image: "./images/profileimage.jpeg", 
       title: "Profile",
       description: "Manage your personal and professional details in one place.",
       path: "/profile",
@@ -41,6 +41,13 @@ function Features() {
       title: "Events",
       description: "Join networking events and alumni meetups.",
       path: "/Events",
+    },
+
+    {
+      image: "./images/help.jpeg",
+      title: "Help Center",
+      description: "Get the support you need - we're here to help",
+      path: "/Help",
     },
   ];
 

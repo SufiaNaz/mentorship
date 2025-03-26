@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import navigation
+import { useNavigate } from "react-router-dom"; 
 import { Mail, Calendar, FileText, UserCheck, MessageCircle, Star, Sun, Moon } from "lucide-react";
 
 const Profile = () => {
@@ -7,14 +7,14 @@ const Profile = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const navigate = useNavigate(); // Initialize navigation
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchUserData = async () => {
       const token = localStorage.getItem("token");
       console.log(token)
       if (!token) {
-        navigate("/LoginPage"); // Redirect if no token
+        navigate("/LoginPage"); 
         return;
       }
 
@@ -37,14 +37,14 @@ const Profile = () => {
     };
 
     fetchUserData();
-  }, [navigate]); // Dependency to navigate on unauthorized access
+  }, [navigate]); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
     <div className={`min-h-screen flex flex-col items-center justify-center p-6 transition-all duration-300 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
-      {/* Dark Mode Toggle */}
+      
       <button 
         className="absolute top-6 right-6 p-2 rounded-full bg-gray-300 hover:bg-gray-400 transition" 
         onClick={() => setDarkMode(!darkMode)}
@@ -52,9 +52,9 @@ const Profile = () => {
         {darkMode ? <Sun className="text-yellow-500" /> : <Moon className="text-gray-800" />}
       </button>
 
-      {/* Profile Card */}
+      
       <div className={`w-full max-w-3xl p-6 rounded-xl shadow-lg transition-all ${darkMode ? "bg-gray-800" : "bg-white"}`}>
-        {/* Profile Header */}
+        
         <div className="flex items-center space-x-6">
           <img className="w-20 h-20 rounded-full border-4 border-blue-500" src="./images/profile.jpeg" alt="" />
           <div>
@@ -63,7 +63,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Profile Details */}
+        
         <div className="mt-6 space-y-4">
           <div className="flex items-center space-x-2">
             <UserCheck className="text-blue-500" />
@@ -81,7 +81,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Skills & Achievements */}
+        
         <div className="mt-6">
           <h3 className="text-lg font-semibold">Skills</h3>
           <div className="flex flex-wrap gap-2 mt-2">
@@ -97,7 +97,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Call to Action Buttons */}
+        
         <div className="mt-6 flex space-x-4">
           <button className="flex items-center px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition">
             <Mail className="mr-2" /> Contact Mentor

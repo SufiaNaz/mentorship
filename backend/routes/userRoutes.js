@@ -1,13 +1,12 @@
 import express from "express";
 import User from "../models/User.js";
-import authMiddleware from "../middleware/authMiddleware.js"; // Middleware to verify token
+import authMiddleware from "../middleware/authMiddleware.js"; 
 
 const router = express.Router();
 
-// Get logged-in user details
 router.get("/me", authMiddleware, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select("-password"); // Exclude password
+    const user = await User.findById(req.user.id).select("-password"); 
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }

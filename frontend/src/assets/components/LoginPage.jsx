@@ -29,7 +29,7 @@ const LoginPage = () => {
         setMessage("✅ Login successful! Redirecting...");
 
         setTimeout(() => {
-          navigate("/profile"); // Redirect to home page after login
+          navigate("/profile"); 
         }, 1500);
       } else {
         setMessage("❌ Invalid credentials. Please try again.");
@@ -43,13 +43,13 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg p-8 flex">
-        {/* Left Side (Hidden on small screens) */}
+        
         <div className="hidden md:block w-1/2 bg-green-600 text-white p-8 rounded-l-lg">
           <h2 className="text-3xl font-bold">Welcome Back!</h2>
           <p className="mt-2">Log in to access your account</p>
         </div>
 
-        {/* Right Side (Login Form) */}
+        
         <div className="w-full md:w-1/2 p-8">
           <h2 className="text-2xl font-bold text-gray-700">Welcome</h2>
           <p className="text-gray-500">Log in to your account to continue</p>

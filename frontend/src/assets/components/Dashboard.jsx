@@ -7,23 +7,25 @@ import Assessments from "./Assessments.jsx";
 import Notification from './Notification.jsx';
 
 
+
 const Dashboard = () => {
   return (
     <div className="flex h-screen bg-gray-100">
-      {/* Sidebar */}
+     
       <Sidebar />
+      
 
       
 
         <div className="p-4 grid grid-cols-3 gap-4">
-          {/* Left Section */}
+          
           <div className="col-span-1 space-y-4">
             <Profilecard />
             <CourseList />
            
           </div>
 
-          {/* Center Section */}
+        
           <div className="col-span-2 space-y-4">
             <Overview />
             <Assessments /> 

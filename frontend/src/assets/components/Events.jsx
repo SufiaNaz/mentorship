@@ -64,7 +64,6 @@ const Events = () => {
         </div>
       </div>
 
-      {/* Event Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (

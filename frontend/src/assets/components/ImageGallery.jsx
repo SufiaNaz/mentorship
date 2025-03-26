@@ -16,13 +16,13 @@ const ImageGallery = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
       {images.map((image, index) => (
         <div key={index} className="relative w-full h-52 rounded-lg overflow-hidden shadow-lg">
-          {/* Background Image */}
+          
           <div
             className="w-full h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${image.src})` }}
           />
 
-          {/* Text Overlay at the Bottom */}
+          
           <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-center py-2">
             {image.text}
           </div>

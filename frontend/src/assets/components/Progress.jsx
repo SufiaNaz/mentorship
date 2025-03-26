@@ -1,13 +1,13 @@
 import React from "react";
-import { Progress } from "../../components/ui/progress.jsx"; // ShadCN UI for progress bars
-import { CheckCircle, Book, Users, Target } from "lucide-react"; // Icons from lucide-react
+import { Progress } from "../../components/ui/progress.jsx"; 
+import { CheckCircle, Book, Users, Target } from "lucide-react"; 
 
 const ProgressTracking = () => {
   return (
     <div className="bg-white p-6 shadow-lg rounded-lg">
       <h3 className="text-2xl font-bold text-blue-600 mb-4">Progress Tracker</h3>
 
-      {/* Mentorship Progress */}
+      
       <div className="mb-6">
 
         <div className="flex items-center gap-2 mb-2">
@@ -18,7 +18,7 @@ const ProgressTracking = () => {
         <p className="text-gray-600 text-sm mt-1">3/4 mentorship sessions completed</p>
       </div>
 
-      {/* Learning Goals */}
+      
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-2">
           <Target className="text-green-500" size={20} />
@@ -28,7 +28,7 @@ const ProgressTracking = () => {
         <p className="text-gray-600 text-sm mt-1">2/5 goals achieved</p>
       </div>
 
-      {/* Course Completion */}
+      
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-2">
           <Book className="text-orange-500" size={20} />
@@ -38,7 +38,7 @@ const ProgressTracking = () => {
         <p className="text-gray-600 text-sm mt-1">85% of courses completed</p>
       </div>
 
-      {/* Overall GPA */}
+      
       <div className="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
         <div>
           <h4 className="text-lg font-semibold">Overall GPA</h4>

@@ -35,20 +35,19 @@ const Networking = () => {
   const [search, setSearch] = useState("");
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  // Filter events based on search input
   const filteredEvents = eventsData.filter((event) =>
     event.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      {/* Header */}
+      
       <div className="text-center mb-6">
         <h1 className="text-4xl font-bold text-blue-600">🌐 Networking Events</h1>
         <p className="text-gray-600">Join events to grow your network and career.</p>
       </div>
 
-      {/* Search Bar */}
+      
       <div className="flex justify-center mb-6">
         <div className="relative w-1/2">
           <Search className="absolute left-3 top-2.5 text-gray-500" />
@@ -62,7 +61,7 @@ const Networking = () => {
         </div>
       </div>
 
-      {/* Upcoming Events */}
+      
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-blue-600 mb-4">Upcoming Events</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -89,7 +88,7 @@ const Networking = () => {
         </div>
       </div>
 
-      {/* Past Events */}
+      
       <div className="max-w-6xl mx-auto mt-10">
         <h2 className="text-2xl font-bold text-gray-600 mb-4">Past Events</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -115,7 +114,6 @@ const Networking = () => {
         </div>
       </div>
 
-      {/* Event Details Modal */}
       {selectedEvent && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg">

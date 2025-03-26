@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Search, Download, Eye } from "lucide-react";
 
-// Sample E-Books Data
+
 const booksData = [
   { id: 1, title: "Introduction to React", author: "John Doe", file: "/ebooks/react.pdf", cover: "https://source.unsplash.com/200x300/?book" },
   { id: 2, title: "JavaScript Essentials", author: "Jane Smith", file: "/ebooks/js-essentials.pdf", cover: "https://source.unsplash.com/200x300/?javascript" },
@@ -13,7 +13,7 @@ const booksData = [
 const EBooks = () => {
   const [search, setSearch] = useState("");
 
-  // Filter books based on search input
+  
   const filteredBooks = booksData.filter((book) =>
     book.title.toLowerCase().includes(search.toLowerCase()) || book.author.toLowerCase().includes(search.toLowerCase())
   );
@@ -23,7 +23,7 @@ const EBooks = () => {
       <h1 className="text-4xl font-bold text-blue-600 text-center mb-6">📚 E-Books & PDFs</h1>
       <p className="text-center text-gray-600 mb-6">Explore and download learning materials.</p>
 
-      {/* Search Bar */}
+     
       <div className="flex justify-center mb-8">
         <div className="relative w-full max-w-md">
           <input
@@ -37,7 +37,7 @@ const EBooks = () => {
         </div>
       </div>
 
-      {/* Books Grid */}
+      
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {filteredBooks.length > 0 ? (
           filteredBooks.map((book) => (
@@ -46,7 +46,7 @@ const EBooks = () => {
               <h2 className="text-xl font-bold">{book.title}</h2>
               <p className="text-gray-600 mb-2">by {book.author}</p>
 
-              {/* Action Buttons */}
+              
               <div className="flex gap-3 mt-3">
                 <a href={book.file} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
                   <Eye size={18} /> View

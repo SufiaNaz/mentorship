@@ -7,9 +7,9 @@ const mentorsData = [
 ];
 
 const menteesData = [
-  { id: 101, name: "Clara Gibson", course: "Business", interests: ["Marketing"], location: "NYC" },
-  { id: 102, name: "Cynthia Burton", course: "Engineering", interests: ["AI"], location: "SF" },
-  { id: 103, name: "Jennifer Martins", course: "Design", interests: ["UI/UX"], location: "LA" },
+  { id: 101, name: "Isabella", course: "Business", interests: ["Marketing"], location: "NYC" },
+  { id: 102, name: "David", course: "Engineering", interests: ["AI"], location: "SF" },
+  { id: 103, name: "Sebastian", course: "Design", interests: ["UI/UX"], location: "LA" },
 ];
 
 const MatchingAlgorithm = () => {
@@ -28,7 +28,7 @@ const MatchingAlgorithm = () => {
           });
           return { mentor, score };
         })
-        .sort((a, b) => b.score - a.score)[0]; // Pick best match
+        .sort((a, b) => b.score - a.score)[0]; 
 
       return { mentee, mentor: bestMatch?.mentor, score: bestMatch?.score || 0 };
     });

@@ -10,15 +10,15 @@ const resumeTemplates = [
 const Interview = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      {/* Header */}
+      
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-blue-600">📄 Resume & Interview Prep</h1>
         <p className="text-gray-600">Build a professional resume & ace your interviews!</p>
       </div>
 
-      {/* Sections */}
+      
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {/* Resume Templates */}
+        
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold flex items-center gap-2">
             <FileText className="text-blue-500" /> Resume Templates
@@ -40,7 +40,7 @@ const Interview = () => {
           </ul>
         </div>
 
-        {/* Interview Tips */}
+        
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold flex items-center gap-2">
             <Briefcase className="text-green-500" /> Interview Tips
@@ -54,7 +54,7 @@ const Interview = () => {
           </ul>
         </div>
 
-        {/* Mock Interviews */}
+        
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold flex items-center gap-2">
             <Mic className="text-purple-500" /> Mock Interviews
@@ -65,7 +65,7 @@ const Interview = () => {
           </button>
         </div>
 
-        {/* Resume Review */}
+        
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold flex items-center gap-2">
             <Star className="text-yellow-500" /> Resume Review
