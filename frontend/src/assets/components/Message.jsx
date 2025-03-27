@@ -8,6 +8,7 @@ const Message = () => {
   const [text, setText] = useState("");
   const [darkMode, setDarkMode] = useState(false);
   const [callActive, setCallActive] = useState(false);
+  const [userType, setUserType] = useState("student"); 
   const localVideoRef = useRef(null);
   const remoteVideoRef = useRef(null);
   let peerConnection;
@@ -22,15 +23,17 @@ const Message = () => {
 
   const sendMessage = async () => {
     if (text.trim()) {
+      
       await addDoc(collection(db, "messages"), {
         text,
-        sender: "John Doe",
+        sender: userType === "student" ? "Student" : "Mentor", 
         timestamp: new Date(),
       });
-      setText("");
+      setText(""); 
     }
   };
 
+  
   const startVideoCall = async () => {
     setCallActive(true);
     try {
@@ -45,23 +48,29 @@ const Message = () => {
 
   return (
     <div className={`min-h-screen flex flex-col items-center p-6 ${darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"}`}>
-      
+      {/* Dark Mode Toggle */}
       <button className="absolute top-6 right-6 p-2 rounded-full bg-gray-300 hover:bg-gray-400 transition" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? <Sun className="text-yellow-500" /> : <Moon className="text-gray-800" />}
       </button>
 
+      {/* User Type Toggle */}
+      <button className="absolute top-20 left-6 p-2 rounded-full bg-gray-300 hover:bg-gray-400 transition" onClick={() => setUserType(userType === "student" ? "mentor" : "student")}>
+        Switch to {userType === "student" ? "Mentor" : "Student"} View
+      </button>
+
+      {/* Chat Window */}
       <div className="w-full max-w-2xl p-4 rounded-lg shadow-lg bg-white dark:bg-gray-800">
         <h2 className="text-xl font-bold text-center">Student-Alumni Chat</h2>
         
         <div className="h-80 overflow-y-auto p-4 border rounded-lg bg-gray-50 dark:bg-gray-700">
           {messages.map((msg) => (
-            <div key={msg.id} className={`p-2 my-2 rounded-lg ${msg.sender === "John Doe" ? "bg-blue-500 text-white self-end" : "bg-gray-300"}`}>
-              <strong>{msg.sender}</strong>: {msg.text}
+            <div key={msg.id} className={`p-2 my-2 rounded-lg ${msg.sender === "Mentor" ? "bg-green-500 text-white" : "bg-blue-500 text-white"} self-${msg.sender === "Mentor" ? "start" : "end"}`}>
+              <strong>{msg.sender}:</strong> {msg.text}
             </div>
           ))}
         </div>
 
-        
+        {/* Message Input */}
         <div className="flex items-center mt-4">
           <input type="text" className="flex-1 p-2 border rounded-l-lg dark:bg-gray-600" value={text} onChange={(e) => setText(e.target.value)} placeholder="Type a message..." />
           <button className="p-2 bg-blue-500 text-white rounded-r-lg" onClick={sendMessage}>
@@ -69,7 +78,7 @@ const Message = () => {
           </button>
         </div>
 
-        
+        {/* Video Call & Attachments */}
         <div className="mt-4 flex justify-between">
           <button className="p-2 bg-green-500 text-white rounded-lg flex items-center" onClick={startVideoCall}>
             <Phone className="mr-2" /> Start Call
@@ -83,6 +92,7 @@ const Message = () => {
         </div>
       </div>
 
+      {/* Video Call Window */}
       {callActive && (
         <div className="fixed top-20 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75">
           <div className="w-3/4 p-6 bg-white rounded-lg shadow-lg text-center">

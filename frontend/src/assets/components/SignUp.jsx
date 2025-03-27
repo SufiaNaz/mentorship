@@ -22,6 +22,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     setError(null);
+    console.log("fetching failed")
     console.log(formData)
     try {
       const response = await fetch("http://localhost:4001/api/auth/signup", {

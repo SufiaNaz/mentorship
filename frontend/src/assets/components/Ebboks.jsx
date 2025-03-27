@@ -3,11 +3,11 @@ import { Search, Download, Eye } from "lucide-react";
 
 
 const booksData = [
-  { id: 1, title: "Introduction to React", author: "John Doe", file: "./images/.pdf", cover: "" },
-  { id: 2, title: "JavaScript Essentials", author: "Jane Smith", file: "/ebooks/js-essentials.pdf", cover: "https://source.unsplash.com/200x300/?javascript" },
-  { id: 3, title: "Web Development Basics", author: "Michael Lee", file: "/ebooks/web-dev.pdf", cover: "https://source.unsplash.com/200x300/?coding" },
-  { id: 4, title: "Machine Learning Guide", author: "Sara Connor", file: "./images/machine.pdf", cover: "https://source.unsplash.com/200x300/?ai" },
-  { id: 5, title: "Data Structures & Algorithms", author: "David Clark", file: "/ebooks/dsa.pdf", cover: "https://source.unsplash.com/200x300/?technology" },
+  { id: 1, title: "Introduction to React", author: "John Doe", file: "./images/react.pdf", cover: "./images/react1.jpeg" },
+  { id: 2, title: "JavaScript Essentials", author: "Jane Smith", file: "./images/javascript1.pdf", cover: "./images/javascript.jpeg" },
+  { id: 3, title: "Web Development Basics", author: "Michael Lee", file: "./images/web.pdf", cover: "./images/web1.jpeg" },
+  { id: 4, title: "Machine Learning Guide", author: "Sara Connor", file: "./images/machine.pdf", cover: "./images/ai.jpeg" },
+  { id: 5, title: "Data Structures & Algorithms", author: "David Clark", file: "./images/data.pdf", cover: "./images/dsa.jpeg" },
 ];
 
 const EBooks = () => {
